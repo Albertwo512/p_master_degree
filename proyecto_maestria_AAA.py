@@ -37,7 +37,7 @@ if st.session_state['start']:
         with sr.Microphone() as source:
             listener.adjust_for_ambient_noise(source)
             with st.spinner("Escuchando...."):
-                for i in range(0, 20):
+                for i in range(0, 3):
                     while True:
                         try:
                             speak("Por favor diga un nombre")
@@ -407,7 +407,7 @@ if st.session_state['start']:
         edad = tupla[4]
         peso = tupla[5]
 
-        if 18 <= edad <= 60:  # Filtra solo los adultos entre 18 y 60 años
+        if 18 <= edad <= 60:  
             if ciudad in ciudades:
                 ciudades[ciudad].append(peso)
             else:
